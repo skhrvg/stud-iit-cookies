@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задание 3</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <form onsubmit="localStorage.token = makeid(16);" style="display: none">
+      <p><input name="login" type="text" required placeholder="login" /></p>
+      <p><input name="email" type="email" required placeholder="email" /></p>
+      <p>
+        <input
+          name="password"
+          type="password"
+          required
+          placeholder="password"
+        />
+      </p>
+      <p><input type="submit" value="login" /></p>
+    </form>
+    <button style="display: none" onclick="logout()">logout</button>
+    <script>
+      if (localStorage.token) {
+        $("button").show();
+      } else {
+        $("form").show();
+      }
+      function logout() {
+        delete localStorage.token;
+        window.location.reload();
+      }
+      function makeid(length) {
+        var result = "";
+        var characters =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        var charactersLength = characters.length;
+        for (var i = 0; i < length; i++) {
+          result += characters.charAt(
+            Math.floor(Math.random() * charactersLength)
+          );
+        }
+        return result;
+      }
+    </script>
+  </body>
+</html>

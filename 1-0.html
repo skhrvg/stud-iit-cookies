@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задание 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  </head>
+  <body>
+    <a href="1-1.html">Страница 1</a>
+    <a href="1-2.html">Страница 2</a>
+    <a href="1-3.html">Страница 3</a>
+    <a href="1-4.html">Страница 4</a>
+    <button onclick="clearCookies()">Очистить куки</button>
+    <script>
+      function clearCookies() {
+        Cookies.remove("visited1");
+        Cookies.remove("visited2");
+        Cookies.remove("visited3");
+        Cookies.remove("visited4");
+      }
+    </script>
+  </body>
+</html>

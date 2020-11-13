@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задание 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <a href="2-2.html">Страница 2</a>
+    <a href="2-3.html">Страница 3</a>
+    <a href="2-4.html">Страница 4</a>
+    <a href="2-5.html">Страница 5</a>
+    <br />
+    <input id="name" type="text" placeholder="name" />
+    <button onclick="saveName()">save</button>
+    <script>
+      function saveName() {
+        Cookies.set("name", $("#name").val());
+      }
+    </script>
+  </body>
+</html>

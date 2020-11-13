@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задание 5</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>Вы посетили наш сайт <span id="counter"></span> раз!</p>
+    <script>
+      if (localStorage.visits) {
+        localStorage.visits++;
+      } else {
+        localStorage.visits = 1;
+      }
+      $("#counter").text(localStorage.visits);
+    </script>
+  </body>
+</html>
