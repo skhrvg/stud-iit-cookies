@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Задание 7</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
+  </head>
+  <body>
+    <form onsubmit="localStorage.phone = $('#phone').val()">
+      <p><input id="phone" type="phone" required /></p>
+      <p><input type="submit" /></p>
+    </form>
+    <script>
+      $("#phone").inputmask({ mask: "(999) 999-9999" });
+      if (localStorage.phone) {
+        $("#phone").val(localStorage.phone);
+      }
+    </script>
+  </body>
+</html>
